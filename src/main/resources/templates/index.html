@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>List Siswa</title>
+</head>
+<meta charset="UTF-8">
+<body>
+<div align="center">
+    <h1>Daftar Siswa</h1>
+    <a href="new">Creat New Project</a> <br><br>
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Jurusan</th>
+            <th>Kelas</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="siswaEntity : ${siswaEntity}">
+            <td th:text="${siswaEntity.id}">id</td>
+            <td th:text="${siswaEntity.jurusan}">jurusan</td>
+            <td th:text="${siswaEntity.kelas}">kelas</td>
+            <td th:text="${siswaEntity.name}">name</td>
+
+            <td>
+                <a th:href="@{/edit/} + ${siswaEntity.id}">Edit</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a th:href="@{/delete/} + ${siswaEntity.id}">Delete</a>
+            </td>
+
+        </tr>
+        </tbody>
+
+    </table>
+</div>
+</body>
+</html>

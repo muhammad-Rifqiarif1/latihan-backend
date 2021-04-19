@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Title</title>
+</head>
+<meta charset="UTF-8">
+<body>
+<div>
+    <h3>Creat New Siswa</h3><br>
+    <form action="#" th:action="@{/addNew}" th:object="${siswaEntity}" method="post">
+        <table>
+            <tr>
+                <td>Nama Siswa:</td>
+                <td><input type="text" th:field="*{Name}" /></td>
+            </tr>
+            <tr>
+                <td>Kelas:</td>
+                <td><input type="text" th:field="*{Kelas}" /></td>
+            </tr>
+            <tr>
+                <td>Jurusan:</td>
+                <td><input type="text" th:field="*{Jurusan}" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">addNew</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
