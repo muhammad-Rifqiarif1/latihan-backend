@@ -1,0 +1,6 @@
+com\example\apicrud\respons\CommondRespond.class
+com\example\apicrud\respons\CommondRespondGenerate.class
+com\example\apicrud\ApicrudApplication.class
+com\example\apicrud\controller\CarController.class
+com\example\apicrud\entities\CarEntity.class
+com\example\apicrud\repositoris\CarRepositoriy.class
